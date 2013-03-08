@@ -50,9 +50,9 @@ String.prototype.tokens = function () {
 
     // Loop through this text
     while (_______________) {
-        WHITES.lastIndex =  ID.lastIndex = NUM.lastIndex = ______.lastIndex =
-        ONELINECOMMENT.lastIndex = ___________________.lastIndex =
-        ________________.lastIndex = ________________.lastIndex = _;
+        WHITES.lastIndex =  ID.lastIndex = NUM.lastIndex = STRING.lastIndex =
+        ONELINECOMMENT.lastIndex = MULTIPLELINECOMMENT.lastIndex =
+        TWOCHAROPERATORS.lastIndex = ONECHAROPERATORS.lastIndex = i;
         from = i;
         // Ignore whitespace.
         if (m = WHITES.bexec(this)) {
