@@ -26,22 +26,22 @@ String.prototype.tokens = function () {
     var m;                      // Matching
     var result = [];            // An array to hold the results.
 
-    var WHITES              = _______________________________________;
-    var ID                  = _______________________________________;
-    var NUM                 = _______________________________________;
-    var STRING              = _______________________________________;
-    var ONELINECOMMENT      = _______________________________________;
-    var MULTIPLELINECOMMENT = _______________________________________;
-    var TWOCHAROPERATORS    = _______________________________________;
-    var ONECHAROPERATORS    = _______________________________________;
+    var WHITES              = /\s+/g;
+    var ID                  = /[a-aA-Z]\w*/g;
+    var NUM                 = /\b\d+(\.\d*)?([eE][+-]?\d+)?\b/g;
+    var STRING              = /('(\\.|[^'])*'|"(\\.|[^"])*")/g;
+    var ONELINECOMMENT      = /\/\/.*/g;
+    var MULTIPLELINECOMMENT = /\/[*](.|\n)*?[*]\//g;
+    var TWOCHAROPERATORS    = /([+][+=]|-[-=]|=[=<>]|[<>][=<>]|&&|[|][...|])/g;
+    var ONECHAROPERATORS    = /([-+*\/=()&|;:<>[\]])/g;
 
     // Make a token object.
     var make = function (type, value) {
         return {
-            type: _____,
-            value: ______,
-            from: ______,
-            to: ____
+            type: type,
+            value: value,
+            from: from,
+            to: i
         };
     };
 
